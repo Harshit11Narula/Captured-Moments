@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/postform.css" />
+    <title>Home Work(Home)</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!--  Nav Bar  -->
+      <nav class="navbar navbar-expand">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <div class="d-flex">
+              <img
+                src="./images/logo.jpg"
+                alt="Simplilearn"
+                style="width: 90px;"
+              />
+              <h2 class="text-primary flex-column ml-3">Captured Moments</h2>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#toggle"
+            aria-controls="my_toggle_nav"
+            aria-expanded="false"
+            aria-label="Toggle Navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="toggle">
+            <div class="navbar-nav ml-auto">
+              <a href="./home.html" class="nav-item nav-link bg-dark active"
+                >Home</a
+              >
+
+              <a
+                href="./post_form.html"
+                class="nav-item nav-link bg-dark active"
+                >Post Article</a
+              >
+              <a href="./login-form.html" class="nav-item nav-link bg-dark"
+                >Login</a
+              >
+
+              <a href="./Register.html" class="nav-item nav-link bg-dark"
+                >Register</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Close of Nav bar-->
+
+      <!-- Card -->
+      <div class="p-2">
+        <div class="card my-2 shadow special-card px-5">
+          <div class="card-header text-center bg-info text-white m-5">
+            <h3>Post your Article</h3>
+          </div>
+          <div class="card-body p-3">
+            <!-- Form -->
+
+            <form>
+              <div class="form-group text m-3 px-5 mb-5">
+                <label class="form-control-label"><h3>Article Name</h3></label>
+                <input
+                  class="form-control align-content-center"
+                  type="text"
+                  id="email"
+                  placeholder="Enter your Article name"
+                />
+              </div>
+
+              <div class="form-group m-3 px-5 mb-5">
+                <label class="form-control-label"><h3>Article</h3></label>
+                <textarea
+                  class="form-control"
+                  type="text"
+                  id="password"
+                  placeholder="Write your story.."
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <div class="form-group m-3 px-5">
+                <label class="form-control-label"><h3>Image</h3></label>
+                <input
+                  class="form-control bg-transparent border-0"
+                  type="file"
+                  id="file"
+                  name="filename"
+                  multiple
+                />
+              </div>
+
+              <div class="form-group">
+                <div class="d-flex justify-content-center p-sm-3">
+                  <button
+                    class="btn btn-primary btn-xl"
+                    onclick="PostEventHandler();"
+                  >
+                    Post
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Closing of form -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing of Card -->
+      <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-md-7">
+          <h2 class="font-weight-light text-white text-center">Top Articles</h2>
+        </div>
+      </div>
+
+      <div id="slideshow" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+          <li data-target="#slideshow" data-slide-to="1"></li>
+          <li data-target="#slideshow" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <img
+                    src="./images/p8.jpg"
+                    alt="Image"
+                    class="img-md-fluid"
+                    width="800px"
+                    height="500px"
+                  />
+                </div>
+                <div
+                  class="overlap-left col-6 bg-success p-md-5 align-self-center"
+                >
+                  <h4 class="text-center">
+                    Travel Photographers Need to Stop Doing
+                  </h4>
+                  <p class="text-dark">
+                    &ldquo;If you’re specifically interested in travel
+                    photography, you’re going to be spending a lot of time in
+                    unfamiliar places, quite possibly surrounded by people who
+                    follow different social etiquette norms…&rdquo;
+                  </p>
+                  <p class="">&mdash; <em>Michelle Ecker</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <img
+                    src="./images/p9.jpg"
+                    alt="Image"
+                    class="img-md-fluid"
+                    width="800px"
+                    height="500px"
+                  />
+                </div>
+                <div
+                  class="overlap-left col-6 bg-success p-md-5 align-self-center"
+                >
+                  <h4 class="text-center">
+                    Planning for a Photo Vacation
+                  </h4>
+
+                  <p class="text-black lead">
+                    &ldquo;I like vacations. But for some inexplicable reason, I
+                    always forget to take them. Maybe it's because I like my
+                    work so much. I don't know. What I do know…&rdquo;
+                  </p>
+                  <p class="">; <em>Jim Bartman</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <img
+                    src="./images/p10.jpg"
+                    alt="Image"
+                    class="img-md-fluid"
+                    width="800px"
+                    height="500px"
+                  />
+                </div>
+                <div
+                  class="overlap-left col-6 bg-success p-md-5 align-self-center"
+                >
+                  <h4 class="text-center">
+                    Winter Photography Sunset
+                  </h4>
+
+                  <p class="text-black lead">
+                    &ldquo;This shot of Portland lighthouse took all of 5
+                    seconds to take. We were on our way home when we noticed
+                    that the kids had fallen asleep in the car. To give them a
+                    break we drove to Portland, near Weymouth just to kill some
+                    time. As we got to the lighthouse the sun started to
+                    beam...&rdquo;
+                  </p>
+                  <p class="">&mdash; <em>Jim Bartman</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#slideshow" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#slideshow" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-copyright text-center py-3 text-primary">
+      &copy; 20/8/2020 Copyright: -
+      <a href="#">Harshit Narula</a>
+    </div>
+    <!-- Closing of Footer-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

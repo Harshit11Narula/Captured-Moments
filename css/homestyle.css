@@ -1,0 +1,15 @@
+
+body{
+ background: url("../images/backgound.jpg")
+}
+
+figure img{
+    border-radius: 60px;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+}
+.special-card {
+  background-color: rgba(245, 245, 245, 1);
+  opacity: 0.7;
+}
